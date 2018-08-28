@@ -1,0 +1,416 @@
+@import 'reset.css';
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #706d6d;
+    
+}
+
+.body {
+    overflow-x: hidden;
+}
+.header {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    background: url('../assets/header.png') center no-repeat;
+    background-size: cover;
+    
+}
+
+
+.nav {
+    width: 100%;
+    height: 92px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+}
+
+.menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 5rem;
+
+}
+
+.item {
+    list-style-type: none;
+}
+
+.item__link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: .25s all ease-in-out;
+    margin: 0 2rem;
+    position: relative;
+}
+
+.item__link:hover {
+    color: #9E6B43;
+}
+
+.item__link::before {
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background: red;
+    position: absolute;
+    top: 24px;
+    opacity: 0;
+    transform: scale(0);
+    transition: .25s all ease-in-out;
+}
+
+.item__link::before:hover {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.section {
+    width: 100%;
+    max-width: 1920px;
+    min-height: 75vh;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 8rem 0;
+}
+
+.section__title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family:'Domine';
+    margin: 4rem 0;
+    padding: 0 6rem;
+
+}
+
+.section__title--white {
+    color: #fff;
+}
+
+.section__subtitle {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.section--private-cooker {
+    justify-content: space-around;
+}
+
+.steps {
+    width: 50%;
+}
+
+.step {
+    padding: 1rem 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.img {
+    width: 35%;
+    height: auto;
+    border: 1px solid #c99754
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    height: 1px;
+    background: #dcdcdb;
+}
+
+.step__title {
+    font-size: 2.5rem;
+    font-family:'Domine';
+    color: #c99754;
+    text-align: center;
+}
+
+.step__content {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.gallery__item {
+    width: 100%;
+    height: auto;
+}
+
+.list-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    list-style-type: none;
+    
+    padding: 2rem 4rem;
+    margin-top: 8rem;
+    border-bottom: 1px solid #d8b484;
+    
+}
+
+.menu-item {
+    width: 100%;
+    padding-top: 12px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.menu-item__desc {
+    width: 100%;
+    padding: 8px;
+    font-family: 'lato';
+    font-size: .8em;
+    color: #2d2c2c;
+    text-align: justify;
+}
+
+.list-menu__price {
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family:'Domine';
+    font-weight: 700;
+}
+
+.list-menu__header {
+    font-size: 2rem;
+    color: #c99754;font-family:'Domine';
+}
+
+.menu-suggestion {
+    background: #ccb290;
+    padding: 8rem 0;
+    margin-bottom: 0;
+}
+
+
+.smoking-list-container {
+    width: 100%;
+    height: 100%;
+    max-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    border: 1px solid #dcdcdb
+}
+
+.smoking-list {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+    
+}
+
+.smoking-list__title {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    font-family:'Domine';
+   
+    padding-bottom: 1rem;
+}
+
+.smoking-list__item {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+   
+}
+
+
+
+.smoking-list__price {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    margin: 6rem 0;
+    
+    
+}
+
+.smoking-list-container{
+    width: 70%;
+}
+
+.open {
+    min-height: 0;
+
+}
+
+.section__image{
+    width: 50%;
+    height: 100%;
+
+    background: url('../assets/food1.jpg') right no-repeat;
+    background-size: cover;
+    
+}
+
+.container{
+    width: 50%;
+}
+
+.smoking-list__photo {
+    width: 50%;
+    height: 100%;
+}
+
+.smoking-list__photo--meat {
+    background: url('../assets/meat.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.smoking-list__photo--fish {
+    background: url('../assets/fish.jpeg') center no-repeat;
+    background-size: cover;
+}
+.smoking-list__photo--cheese {
+    background: url('../assets/cheese.jpeg') center no-repeat;
+    background-size: cover;
+}
+.section--smoking {
+    min-height: 0;
+  
+}
+
+.banner {
+    width: 100%;
+    height: 75vh;
+
+    background: url('../assets/banner.jpeg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+.catering-list{
+    width: 75%;
+    height: auto;
+}
+
+.catering-list__header {
+    font-size: 2rem;
+    width: 45%;
+    text-align: center;
+    margin: 3rem 0;
+    font-family:'Domine';
+    color: #c99754;
+}
+
+.catering-list__item {
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    
+    margin: 2rem 0;
+    padding: .5rem;
+    border-bottom: 1px solid #dcdcdb;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.catering-list__item:nth-child(0) {
+    margin-top: 3rem;
+}
+
+.catering-list__item:nth-child(2n){
+    color: #c99754;
+    
+}
+
+
+.tns-outer {
+    width: 100%;
+    height: auto;position: relative;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tns-controls {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 48px;
+    z-index: 2;;
+}
+
+.tns-nav {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 24px;
+    z-index: 2;;
+}
+
+.tns-outer [data-action] {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2
+    
+}
+
+.tns-inner {
+    height: 100vh;
+}
+
+
+.jarallax {
+   
+    
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    /* support for plugin https://github.com/bfred-it/object-fit-images */
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
