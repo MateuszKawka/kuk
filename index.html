@@ -15,16 +15,16 @@
         <nav class='nav'>
             <ul class='menu'>
                 <li class='item'>
-                    <a href='#' class='item__link'>Prywatny kucharz</a>
+                    <a href='#private' class='item__link' data-scroll>Prywatny kucharz</a>
                 </li>
                 <li class='item'>
-                    <a href='#' class='item__link'>Propozycje menu</a>
+                    <a href='#menus' class='item__link' data-scroll>Propozycje menu</a>
                 </li>
                 <li class='item'>
-                    <a href='#' class='item__link'>Catering</a>
+                    <a href='#catering' class='item__link' data-scroll  >Catering</a>
                 </li>
                 <li class='item'>
-                    <a href='#' class='item__link'>Wyroby wędzarnicze</a>
+                    <a href='#smoking' class='item__link' data-scroll>Wyroby wędzarnicze</a>
                 </li>
                 <li class='item'>
                     <a href='#' class='item__link'>Galeria</a>
@@ -39,7 +39,7 @@
         </nav>
     </header>
     <main class='main'>
-        <section class="section open" data-aos="fade-right" data-aos-duration="1500">
+        <section class="section open" data-aos="fade-right" data-aos-duration="1500" id='private'>
             
                 <div class='section__image jarallax'  data-jarallax-element="-140"></div>
                 <div class='container'>
@@ -90,7 +90,7 @@
             
             <img src='./sources/assets/gallery.jpg' class='img' data-aos="fade-left" data-aos-duration="1500">
         </section>
-        <section class='section menu-suggestion'>
+        <section class='section menu-suggestion' id='menus'>
             <h2 class='section__title section__title--white' data-aos="fade-up" data-aos-duration="1500">Propozycje menu</h2>
             <ul class="list-menu" data-aos="fade-left" data-aos-duration="1500">
                 <lh class="list-menu__header "></lh>
@@ -139,7 +139,34 @@
              </ul>
         </section>
         
-        <section class='section section--smoking'>
+        <section class='section' id='catering'>
+            <ul class="catering-list">
+                    <lh class="catering-list__header" data-aos="fade-up" data-aos-duration="1500">
+                       Dodatkowo oferuję możliwość zamówienia ekskluzywnego cateringu,
+                       przygotowywanego z najwyższej jakości produktów. Poniżej przedstawiam przykładowe
+                       propozycje:
+                    </lh>
+                    <li class="catering-list__item">Rolada z biszkoptu szpinakowego, z łososiem wędzonym i chrzanowym serkiem</li>
+                    <li class="catering-list__item">Roladki z pieczonego bakłażana nadziewane pomidorami, pietruszką, z sosem czosnkowym</li>
+                    <li class="catering-list__item">Roladki z łososia wędzonego z ziołowym twarożkiem na plastrach zielonego ogórka</li>
+                    <li class="catering-list__item">Carpaccio z pieczonego buraka z orzechami włoskimi, kozim serem i aromatycznym dresingiem</li>
+                    <li class="catering-list__item">Tartinki z łososiem wędzonym na gorąco i świeżymi warzywami</li>
+                    <li class="catering-list__item">Deska ryb wędzonych (np. pstrąg, halibut, sieja, łosoś), grillowane cytryny, majonez koperkowy</li>
+                    <li class="catering-list__item">Deska mięs wędzonych (np. boczek wieprzowy, żeberka, polędwiczka, kaszanka, domowa kiełbasa, pierś z kaczki),
+                       domowy chrzan i żurawina.
+                    </li>
+                    <li class="catering-list__item">Plastry rostbefu marynowane w imbirze i sosie sojowym na aromatycznej rukoli</li>
+                    <li class="catering-list__item">Pasztet z gęsi domowego wypieku w towarzystwie karmelizowanej cebuli i sosu tatarskiego</li>
+                    <li class="catering-list__item">Baby mozarella, pomidor koktajlowy, świeża bazylia i sos balsamiczny</li>
+                    <li class="catering-list__item">Tatar z łososia z musem z avocado skropiony oliwą z pestek z dyni podany z chrupiącą ziołową grzanką</li>
+                    <li class="catering-list__item">Tatar wołowy w towarzystwie ogórka konserwowego, marynowanych grzybów, białej cebuli i pudru
+                       musztardowego
+                    </li>
+                    <li class="catering-list__item">Płatki różowej kaczki owinięte na miodowej gruszce z ruccolą</li>
+                 </ul>
+        </section>
+        <div class="banner" data-aos="fade-up" data-aos-duration="1500"></div>
+        <section class='section section--smoking' id='smoking'>
                 <h2 class='section__title' data-aos="fade-up" data-aos-duration="1500">Propozycje menu</h2>
                 <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
                         <div class='smoking-list__photo smoking-list__photo--meat'></div>
@@ -196,46 +223,32 @@
                                
                              </div>
         </section>
-        <div class="banner" data-aos="fade-up" data-aos-duration="1500"></div>
-        <section class='section'>
-            <ul class="catering-list">
-                    <lh class="catering-list__header" data-aos="fade-up" data-aos-duration="1500">
-                       Dodatkowo oferuję możliwość zamówienia ekskluzywnego cateringu,
-                       przygotowywanego z najwyższej jakości produktów. Poniżej przedstawiam przykładowe
-                       propozycje:
-                    </lh>
-                    <li class="catering-list__item">Rolada z biszkoptu szpinakowego, z łososiem wędzonym i chrzanowym serkiem</li>
-                    <li class="catering-list__item">Roladki z pieczonego bakłażana nadziewane pomidorami, pietruszką, z sosem czosnkowym</li>
-                    <li class="catering-list__item">Roladki z łososia wędzonego z ziołowym twarożkiem na plastrach zielonego ogórka</li>
-                    <li class="catering-list__item">Carpaccio z pieczonego buraka z orzechami włoskimi, kozim serem i aromatycznym dresingiem</li>
-                    <li class="catering-list__item">Tartinki z łososiem wędzonym na gorąco i świeżymi warzywami</li>
-                    <li class="catering-list__item">Deska ryb wędzonych (np. pstrąg, halibut, sieja, łosoś), grillowane cytryny, majonez koperkowy</li>
-                    <li class="catering-list__item">Deska mięs wędzonych (np. boczek wieprzowy, żeberka, polędwiczka, kaszanka, domowa kiełbasa, pierś z kaczki),
-                       domowy chrzan i żurawina.
-                    </li>
-                    <li class="catering-list__item">Plastry rostbefu marynowane w imbirze i sosie sojowym na aromatycznej rukoli</li>
-                    <li class="catering-list__item">Pasztet z gęsi domowego wypieku w towarzystwie karmelizowanej cebuli i sosu tatarskiego</li>
-                    <li class="catering-list__item">Baby mozarella, pomidor koktajlowy, świeża bazylia i sos balsamiczny</li>
-                    <li class="catering-list__item">Tatar z łososia z musem z avocado skropiony oliwą z pestek z dyni podany z chrupiącą ziołową grzanką</li>
-                    <li class="catering-list__item">Tatar wołowy w towarzystwie ogórka konserwowego, marynowanych grzybów, białej cebuli i pudru
-                       musztardowego
-                    </li>
-                    <li class="catering-list__item">Płatki różowej kaczki owinięte na miodowej gruszce z ruccolą</li>
-                 </ul>
+        
+        <section class='section contact'>
+            
+            <div class='section__image contact-image jarallax'  data-jarallax-element="-140"></div>
+                <div class='container container-color'>
+                        
+                    <form class='contact-form'>
+                            <h2 class='section__title'>Skontaktuj się ze mną</h2>
+                        <label for="" class='contact-form__label'>Imię i nazwisko</label>
+                        <input type="text" class='contact-form__input'>
+                        <label for="" class='contact-form__label'>Adres email</label>
+                        <input type="text" class='contact-form__input'>
+                        
+                        <label for="" class='contact-form__label'>Wiadomość</label>
+                        <textarea class='contact-form__textarea'></textarea>
+                        <button class='contact-form__button'>Wyślij</button>
+                    </form>
+                </div>
         </section>
-        <section class='section'>
-            <img src='./sources/assets/gallery.jpg' class='gallery__item'>
-        </section>
-        <section class='section'>
-                <div class="my-slider">
-                        <img src='./sources/assets/gallery.jpg'>
-                        <img src='./sources/assets/gallery.jpg'>
-                        <img src='./sources/assets/gallery.jpg'>
-                      </div>
-        </section>
+        
 
     </main>
+    <script src='./sources/scripts/menuspy.min.js'></script>
     <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/min/tiny-slider.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
