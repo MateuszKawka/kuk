@@ -1,40 +1,32 @@
-
 @import 'reset.css';
-
 html {
     font-size: 62.5%;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: #333333;
-    
 }
 
 .body {
     overflow-x: hidden;
 }
+
 .header {
     width: 100%;
     height: 100vh;
-
     display: flex;
-
     background: url('../assets/header.png') center no-repeat;
-    background-size: cover;
-    
+    background-size: contain;
 }
-
 
 .nav {
     width: 100%;
     height: 92px;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -49,7 +41,6 @@ html {
     justify-content: space-around;
     align-items: center;
     padding-right: 5rem;
-
 }
 
 .item {
@@ -92,7 +83,6 @@ html {
     max-width: 1920px;
     min-height: 75vh;
     height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,14 +94,14 @@ html {
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
-    font-family:'Domine';
+    font-family: 'Domine';
     margin: 4rem 0;
     padding: 0 6rem;
-
 }
 
 .section__title--white {
-    color: #fff;
+    color: #dcdcdb;
+
 }
 
 .section__subtitle {
@@ -151,7 +141,7 @@ html {
 
 .step__title {
     font-size: 2.5rem;
-    font-family:'Domine';
+    font-family: 'Domine';
     color: #99531f;
     text-align: center;
 }
@@ -160,6 +150,10 @@ html {
     margin-top: 3rem;
     text-align: center;
     font-size: 1.4rem;
+}
+
+.gallery {
+    margin-bottom: 0;
 }
 
 .gallery__item {
@@ -172,18 +166,16 @@ html {
     flex-wrap: wrap;
     width: 75%;
     list-style-type: none;
-    
     padding: 2rem 4rem;
     margin-top: 8rem;
     border-bottom: 1px solid #9e9e9e;
-    
 }
 
 .menu-item {
     width: 100%;
     padding-top: 12px;
     font-size: 16px;
-    color: #ffa55c;
+    color: #9a5521;
 }
 
 .menu-item__desc {
@@ -198,15 +190,16 @@ html {
 .list-menu__price {
     width: 100%;
     text-align: right;
-    color: #ffa55c;
+    color: #fff;
     font-size: 1.5rem;
-    font-family:'Domine';
-    font-weight: 700;
+    
+    font-weight: 300;
 }
 
 .list-menu__header {
     font-size: 2rem;
-    color: #ffa55c;font-family:'Domine';
+    color: #9a5521;
+    font-family: 'Domine';
 }
 
 .menu-suggestion {
@@ -214,7 +207,6 @@ html {
     padding: 8rem 0;
     margin-bottom: 0;
 }
-
 
 .smoking-list-container {
     width: 100%;
@@ -236,7 +228,6 @@ html {
     flex-wrap: wrap;
     align-items: center;
     padding: 1rem 2rem;
-    
 }
 
 .smoking-list__title {
@@ -244,49 +235,39 @@ html {
     width: 100%;
     text-align: center;
     margin: 2rem 0;
-    font-family:'Domine';
-   
+    font-family: 'Domine';
     padding-bottom: 1rem;
 }
 
 .smoking-list__item {
     margin: 0 1rem;
     font-size: 1.6rem;
-   
 }
-
-
 
 .smoking-list__price {
     font-size: 1.4rem;
     width: 100%;
     text-align: center;
     margin: 6rem 0;
-    
-    
 }
 
-.smoking-list-container{
+.smoking-list-container {
     width: 70%;
 }
 
 .open {
     min-height: 0;
-
 }
 
-.section__image{
+.section__image {
     width: 50%;
     height: 100%;
-
     background: url('../assets/food1.jpg') right no-repeat;
     background-size: cover;
-    
 }
 
-.container{
+.container {
     width: 50%;
-    
 }
 
 .smoking-list__photo {
@@ -303,25 +284,25 @@ html {
     background: url('../assets/fish.jpeg') center no-repeat;
     background-size: cover;
 }
+
 .smoking-list__photo--cheese {
     background: url('../assets/cheese.jpeg') center no-repeat;
     background-size: cover;
 }
+
 .section--smoking {
     min-height: 0;
-  
 }
 
 .banner {
     width: 100%;
     height: 75vh;
-
     background: url('../assets/banner.jpeg') center no-repeat;
     background-size: cover;
     background-attachment: fixed
 }
 
-.catering-list{
+.catering-list {
     width: 75%;
     height: auto;
 }
@@ -331,18 +312,16 @@ html {
     width: 45%;
     text-align: center;
     margin: 3rem 0;
-    font-family:'Domine';
+    font-family: 'Domine';
     color: #99531f;
 }
 
 .catering-list__item {
     font-size: 1.4rem;
     font-family: 'Roboto';
-    
     margin: 2rem 0;
     padding: .5rem;
     border-bottom: 1px solid #dcdcdb;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -352,16 +331,14 @@ html {
     margin-top: 3rem;
 }
 
-.catering-list__item:nth-child(2n){
+.catering-list__item:nth-child(2n) {
     color: #99531f;
-    
 }
-
 
 .tns-outer {
     width: 100%;
-    height: auto;position: relative;
-
+    height: auto;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -375,18 +352,32 @@ html {
     align-items: center;
     position: absolute;
     bottom: 48px;
-    z-index: 2;;
+    z-index: 2;
+    ;
 }
 
 .tns-nav {
     width: 40%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 24px;
-    z-index: 2;;
+    z-index: 2;
+}
+
+.tns-nav button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: none;
+    background: #fff;
+    margin: 0 1rem;
+}
+
+.tns-nav-active {
+    background: #99531f !important
 }
 
 .tns-outer [data-action] {
@@ -394,19 +385,15 @@ html {
     top: 24px;
     left: 24px;
     z-index: 2
-    
 }
 
 .tns-inner {
     height: 100vh;
 }
 
+.jarallax {}
 
-.jarallax {
-   
-    
-}
-.jarallax > .jarallax-img {
+.jarallax>.jarallax-img {
     position: absolute;
     object-fit: cover;
     /* support for plugin https://github.com/bfred-it/object-fit-images */
@@ -419,38 +406,39 @@ html {
 }
 
 .contact {
-    margin-top: 0;
+    margin: 0;
 }
 
 .container-color {
-    background: #ffa55c;
+    background: #fff;
+    box-sizing: border-box;
 }
 
 .contact-form {
     width: 100%;
     height: 100%;
-
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column wrap;
-    padding-left: 5rem;
+    padding: 5rem 0 0 5rem;
 }
 
 .contact-form__label {
     font-size: 1.4rem;
     color: #333333;
     margin: 1rem 0;
-    font-family: 'Domine';
-    font-weight: 700;
+    
+    font-weight: 300;
 }
 
 .contact-form__input {
     border: none;
     width: 55%;
-    height: 4.5rem;
+    height: 3.5rem;
     padding: 0 1rem;
-    color: #333333
+    color: #dcdcdb;
+    background: #333333
 }
 
 .contact-form__textarea {
@@ -460,43 +448,158 @@ html {
     border: none;
     padding: 1rem;
     font-family: 'Roboto';
-    color: #333333;
+    color: #dcdcdb;
+    background: #333333
 }
 
 .contact-form__button {
     width: 164px;
-    height: 48px;
-    background: #fff;
+    height: 36px;
+    background: #333333;
     font-size: 1.4rem;
     font-family: 'Domine';
     font-weight: 700;
     border: none;
-    color: #333333;
+    color: #dcdcdb;
     margin-top: 2rem;
     cursor: pointer;
 }
 
-.active{
-    background: #99531f;
+.active {
+    background: #dcdcdb;
     transition: .3s all ease-in-out;
 }
 
+.footer {
+    width: 100%;
+    height: 164px;
+    background: #333333
+}
 
+.section--last {
+    margin-bottom: 0;
+}
+
+.slider-item{
+    position: relative;
+    width: 100%;
+    
+}
+
+.slider-item__img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.slider-item__gradient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.13) 1%, rgba(139,139,139,0.13) 22%, rgba(28,28,28,0.4) 42%, rgba(0,0,0,0.44) 47%, rgba(0,0,0,0.7) 80%);
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.13) 1%,rgba(139,139,139,0.13) 22%,rgba(28,28,28,0.4) 42%,rgba(0,0,0,0.44) 47%,rgba(0,0,0,0.7) 80%);
+background: linear-gradient(to bottom, rgba(255,255,255,0.13) 1%,rgba(139,139,139,0.13) 22%,rgba(28,28,28,0.4) 42%,rgba(0,0,0,0.44) 47%,rgba(0,0,0,0.7) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', endColorstr='#b3000000',GradientType=0 );
+}
+
+.slider-item__content {
+    width: 100%;
+    padding: 3rem 0 6rem 6rem;
+    position: absolute;
+    bottom: 30%;
+    left: 0%;
+    vertical-align: 100%;
+    z-index: 10;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+
+    
+}
 
 @media only screen and (max-width: 800px) {
-    .section{
+    .section {
         flex-flow: column wrap;
     }
-    
-    .smoking-list-container{
+    .smoking-list-container {
         flex-flow: column wrap;
     }
-
     .container {
         width: 100% !important;
     }
-
     .section__image {
         width: 100%;
     }
+}
+
+.spinner-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    visibility: visible;
+    opacity: 1;
+    animation: fade 1s;
+}
+
+.spinner-container__text {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    border-color: #333 transparent #333 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  @keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0  ;
+    }
+}
+
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);transition: transform 200ms linear;
+}
+.headroom--unpinned {
+    transform: translateY(-100%);transition: transform 200ms linear;
 }

@@ -4,7 +4,7 @@
     container: '.my-slider',
     items: 1,
     slideBy: 'page',
-    autoplay: true
+    autoplay: false
   });
 
   var scroll = new SmoothScroll('a[href*="#"]', {
@@ -46,3 +46,15 @@
 var elm = document.querySelector('.menu');
 var ms = new MenuSpy(elm);
 console.log(elm)
+
+window.addEventListener('load', function(){
+	const spinner = document.getElementById('spinner')
+	spinner.style.visibility = 'hidden'
+})
+
+// grab an element
+var myElement = document.querySelector(".headroom");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement);
+// initialise
+headroom.init(); 

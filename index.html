@@ -1,7 +1,7 @@
 <html>
 
 <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/tiny-slider.css">
 
     <link href="https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:400,500&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="./sources/styles/main.css">
@@ -11,8 +11,13 @@
 </head>
 
 <body class='body'>
-    <header class='header jarallax'  data-jarallax-element="-1440">
-        <nav class='nav'>
+    <div class="spinner-container" id='spinner'>
+        <div class="lds-dual-ring spinner"></div>
+        <p class='spinner-container__text'>Please, one moment.</p>
+    </div>
+
+    <header class='header jarallax' data-jarallax-element="-1440">
+        <nav class='nav headroom'  >
             <ul class='menu'>
                 <li class='item'>
                     <a href='#private' class='item__link' data-scroll>Prywatny kucharz</a>
@@ -21,231 +26,305 @@
                     <a href='#menus' class='item__link' data-scroll>Propozycje menu</a>
                 </li>
                 <li class='item'>
-                    <a href='#catering' class='item__link' data-scroll  >Catering</a>
+                    <a href='#catering' class='item__link' data-scroll>Catering</a>
                 </li>
                 <li class='item'>
                     <a href='#smoking' class='item__link' data-scroll>Wyroby wędzarnicze</a>
                 </li>
                 <li class='item'>
-                    <a href='#' class='item__link'>Galeria</a>
+                    <a href='#gallery' class='item__link'>Galeria</a>
                 </li>
                 <li class='item'>
-                    <a href='#' class='item__link'>O mnie</a>
+                    <a href='#about' class='item__link'>O mnie</a>
                 </li>
                 <li class='item'>
-                    <a href='#' class='item__link'>Kontakt</a>
+                    <a href='#contact' class='item__link'>Kontakt</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class='main'>
         <section class="section open" data-aos="fade-right" data-aos-duration="1500" id='private'>
-            
-                <div class='section__image jarallax'  data-jarallax-element="-140"></div>
-                <div class='container'>
-                    
+
+            <div class='section__image jarallax' data-jarallax-element="-140"></div>
+            <div class='container'>
+
                 <h2 class='section__title' data-aos="fade-up" data-aos-duration="1500">Jak to działa?</h2>
-                <p class='section__subtitle' data-aos="fade-up" data-aos-duration="1500">Wymarzone przyjęcie w kilku prostych krokach:</p>
-                </div>
-                
-            </section>
-        <section class='section section--private-cooker' id='privateCooker'>
-            <div class="steps"  data-aos="fade-right" data-aos-duration="1500">
-                    <article class='step'>
-                            <h3 class='step__title'>Wybór menu
-                            </h3>
-                            <p class='step__content'>Skontaktuj się telefonicznie lub mailowo w celu ustalenia szczegółów przyjęcia, wyboru potraw, lub skomponowania
-                                własnych zestawień. W razie wątpliwości, pytań, a także specjalnych wymagań chętnie służę pomocą. W trosce
-                                o zadowolenie klienta, gwarantuję indywidualne podejście do każdego zlecenia.
-                            </p>
-                        </article>
-                        <article class='step'>
-                            <h3 class='step__title'>Dodatkowe udogodnienia
-            
-                            </h3>
-                            <p class='step__content'>W celu zwiększenia komfortu przyjęcia, możesz dodatkowo skorzystać z usług kelnera, barmana, lub sommeliera, z którymi współpracuję. Wystarczy powiadomić o tym, podczas ustalania szczegółów.
-            
-            
-                            </p>
-                        </article>
-                        <article class='step'>
-                            <h3 class='step__title'>Twoje przyjęcie
-            
-                            </h3>
-                            <p class='step__content'>Zjawiam się u Ciebie na około 3h przed planowanym przyjęciem, wraz z produktami i swoją zastawą, a następnie rozpoczynam przygotowania do przyjęcia. Od tego momentu już niczym się nie martwisz. Potrawy są serwowane o ustalonej przez Ciebie godzinie, w pełnej dbałości o profesjonalny wygląd, oraz restauracyjna aranżację.
-            
-            
-                            </p>
-                        </article>
-                        <article class='step'>
-                            <h3 class='step__title'>Happy end
-            
-                            </h3>
-                            <p class='step__content'>Ty się bawisz, a ja sprzątam po sobie kuchnię, oraz zabieram zastawę. Nie musisz się martwić o brudne naczynia, ani nieumyte patelnie. W zamian za to, cieszysz się towarzystwem swoich gości.
-            
-            
-                            </p>
-                        </article>
+                <p class='section__subtitle' data-aos="fade-up" data-aos-duration="1500">Wymarzone przyjęcie w kilku
+                    prostych krokach:</p>
             </div>
-            
+
+        </section>
+        <section class='section section--private-cooker' id='privateCooker'>
+            <div class="steps" data-aos="fade-right" data-aos-duration="1500">
+                <article class='step'>
+                    <h3 class='step__title'>Wybór menu
+                    </h3>
+                    <p class='step__content'>Skontaktuj się telefonicznie lub mailowo w celu ustalenia szczegółów
+                        przyjęcia, wyboru potraw, lub skomponowania
+                        własnych zestawień. W razie wątpliwości, pytań, a także specjalnych wymagań chętnie służę
+                        pomocą. W trosce
+                        o zadowolenie klienta, gwarantuję indywidualne podejście do każdego zlecenia.
+                    </p>
+                </article>
+                <article class='step'>
+                    <h3 class='step__title'>Dodatkowe udogodnienia
+
+                    </h3>
+                    <p class='step__content'>W celu zwiększenia komfortu przyjęcia, możesz dodatkowo skorzystać z usług
+                        kelnera, barmana, lub sommeliera, z którymi współpracuję. Wystarczy powiadomić o tym, podczas
+                        ustalania szczegółów.
+
+
+                    </p>
+                </article>
+                <article class='step'>
+                    <h3 class='step__title'>Twoje przyjęcie
+
+                    </h3>
+                    <p class='step__content'>Zjawiam się u Ciebie na około 3h przed planowanym przyjęciem, wraz z
+                        produktami i swoją zastawą, a następnie rozpoczynam przygotowania do przyjęcia. Od tego momentu
+                        już niczym się nie martwisz. Potrawy są serwowane o ustalonej przez Ciebie godzinie, w pełnej
+                        dbałości o profesjonalny wygląd, oraz restauracyjna aranżację.
+
+
+                    </p>
+                </article>
+                <article class='step'>
+                    <h3 class='step__title'>Happy end
+
+                    </h3>
+                    <p class='step__content'>Ty się bawisz, a ja sprzątam po sobie kuchnię, oraz zabieram zastawę. Nie
+                        musisz się martwić o brudne naczynia, ani nieumyte patelnie. W zamian za to, cieszysz się
+                        towarzystwem swoich gości.
+
+
+                    </p>
+                </article>
+            </div>
+
             <img src='./sources/assets/gallery.jpg' class='img' data-aos="fade-left" data-aos-duration="1500">
         </section>
         <section class='section menu-suggestion' id='menus'>
-            <h2 class='section__title section__title--white' data-aos="fade-up" data-aos-duration="1500">Propozycje menu</h2>
+            <h2 class='section__title section__title--white' data-aos="fade-up" data-aos-duration="1500">Propozycje
+                menu</h2>
             <ul class="list-menu" data-aos="fade-left" data-aos-duration="1500">
                 <lh class="list-menu__header "></lh>
-                <li class="menu-item">CARPACCIO Z BURAKA <span class="menu-item__desc">(Orzechy piniowe, granat, liście szpinaku, sos malinowy z balsamico)</span></li>
-                <li class="menu-item">WĄTRÓBKA CIELĘCA <span class="menu-item__desc">(Kruszonka z karmelizowanego boczku, pieczona cebula, sos rozmarynowo-szałwiowy)</span></li>
-                <li class="menu-item">FRANCUSKA ZUPA RYBNA BOUILLABAISSE <span class="menu-item__desc">(Świeże ryby i owoce morza, fenkuł, pomidory, bulion warzywny)</span></li>
-                <li class="menu-item">POLĘDWICA Z DORSZA <span class="menu-item__desc">(Puree z groszku z miętą, kawior cytrynowy, emulsja koperkowa, chrust z pora)</span></li>
-                <li class="menu-item">CZEKOLADOWO- POMARAŃCZOWE BROWNIE <span class="menu-item__desc">(Mus pomarańczowy, żel malinowy, kruszonka z jagód goi)</span></li>
+                <li class="menu-item">CARPACCIO Z BURAKA <span class="menu-item__desc">(Orzechy piniowe, granat, liście
+                        szpinaku, sos malinowy z balsamico)</span></li>
+                <li class="menu-item">WĄTRÓBKA CIELĘCA <span class="menu-item__desc">(Kruszonka z karmelizowanego
+                        boczku, pieczona cebula, sos rozmarynowo-szałwiowy)</span></li>
+                <li class="menu-item">FRANCUSKA ZUPA RYBNA BOUILLABAISSE <span class="menu-item__desc">(Świeże ryby i
+                        owoce morza, fenkuł, pomidory, bulion warzywny)</span></li>
+                <li class="menu-item">POLĘDWICA Z DORSZA <span class="menu-item__desc">(Puree z groszku z miętą, kawior
+                        cytrynowy, emulsja koperkowa, chrust z pora)</span></li>
+                <li class="menu-item">CZEKOLADOWO- POMARAŃCZOWE BROWNIE <span class="menu-item__desc">(Mus
+                        pomarańczowy, żel malinowy, kruszonka z jagód goi)</span></li>
                 <span class="list-menu__price">145zł/os.</span>
-             </ul>
-             <ul class="list-menu" data-aos="fade-right" data-aos-duration="1500">
+            </ul>
+            <ul class="list-menu" data-aos="fade-right" data-aos-duration="1500">
                 <lh class="list-menu__header "></lh>
-                <li class="menu-item">TATAR WOŁOWY <span class="menu-item__desc">(Szalotka, ogórek konserwowy, grzyby marynowane, żółtko jaja confit, puder musztardowy, prażone ziarna kolendry)</span></li>
-                <li class="menu-item">KREWETKI Z PATELNI <span class="menu-item__desc">(Czosnek, szalotka, białe wino, nać pietruszki, ziołowa grzanka)</span></li>
-                <li class="menu-item">WĘDZONA PIERŚ Z KACZKI <span class="menu-item__desc">(Kruche sałaty, Sos malinowy, marynowana czerwona cebula, prażone pestki słonecznika)</span></li>
-                <li class="menu-item">STEK Z SEZONOWANEGO ANTRYKOTU <span class="menu-item__desc">(Frytki belgijskie, sos pieprzowy, warzywa grillowane)</span></li>
-                <li class="menu-item">KREM BRULEE <span class="menu-item__desc">(karmelizowany cukier, glazurowane owoce)</span></li>
+                <li class="menu-item">TATAR WOŁOWY <span class="menu-item__desc">(Szalotka, ogórek konserwowy, grzyby
+                        marynowane, żółtko jaja confit, puder musztardowy, prażone ziarna kolendry)</span></li>
+                <li class="menu-item">KREWETKI Z PATELNI <span class="menu-item__desc">(Czosnek, szalotka, białe wino,
+                        nać pietruszki, ziołowa grzanka)</span></li>
+                <li class="menu-item">WĘDZONA PIERŚ Z KACZKI <span class="menu-item__desc">(Kruche sałaty, Sos
+                        malinowy, marynowana czerwona cebula, prażone pestki słonecznika)</span></li>
+                <li class="menu-item">STEK Z SEZONOWANEGO ANTRYKOTU <span class="menu-item__desc">(Frytki belgijskie,
+                        sos pieprzowy, warzywa grillowane)</span></li>
+                <li class="menu-item">KREM BRULEE <span class="menu-item__desc">(karmelizowany cukier, glazurowane
+                        owoce)</span></li>
                 <span class="list-menu__price">160zł/os</span>
-             </ul>
-             <ul class="list-menu" data-aos="fade-left" data-aos-duration="1500">
+            </ul>
+            <ul class="list-menu" data-aos="fade-left" data-aos-duration="1500">
                 <lh class="list-menu__header "></lh>
-                <li class="menu-item">TATAR Z ŁOSOSIA <span class="menu-item__desc">(Cebula czerwona, limonka, avocado, olej sezamowy, rzodkiew japońska, tost melba, aioli)</span></li>
+                <li class="menu-item">TATAR Z ŁOSOSIA <span class="menu-item__desc">(Cebula czerwona, limonka, avocado,
+                        olej sezamowy, rzodkiew japońska, tost melba, aioli)</span></li>
                 <li class="menu-item">PIECZONE FIGI <span class="menu-item__desc">(Ser kozi, miód, orzechy włoskie)</span></li>
-                <li class="menu-item">KRUPNIK NA WĘDZONCE <span class="menu-item__desc">(Podwędzane żeberka wieprzowe, kasza perłowa, podsmażane warzywa, koperkowa śmietana)</span></li>
-                <li class="menu-item">COMBER Z SARNY<span class="menu-item__desc"> (Pikantna kasza gryczana, smażone prawdziwki, pietruszkowa kruszonka, sos winny z owocami leśnymi)</span></li>
-                <li class="menu-item">BEZA WŁOSKA <span class="menu-item__desc">( krem kawowy, karmelizowane orzechy, kawior porzeczkowy)</span></li>
+                <li class="menu-item">KRUPNIK NA WĘDZONCE <span class="menu-item__desc">(Podwędzane żeberka wieprzowe,
+                        kasza perłowa, podsmażane warzywa, koperkowa śmietana)</span></li>
+                <li class="menu-item">COMBER Z SARNY<span class="menu-item__desc"> (Pikantna kasza gryczana, smażone
+                        prawdziwki, pietruszkowa kruszonka, sos winny z owocami leśnymi)</span></li>
+                <li class="menu-item">BEZA WŁOSKA <span class="menu-item__desc">( krem kawowy, karmelizowane orzechy,
+                        kawior porzeczkowy)</span></li>
                 <span class="list-menu__price">150zł/os.</span>
-             </ul>
-             <ul class="list-menu" data-aos="fade-right" data-aos-duration="1500">
+            </ul>
+            <ul class="list-menu" data-aos="fade-right" data-aos-duration="1500">
                 <lh class="list-menu__header "></lh>
-                <li class="menu-item">SAŁATA CEZAR  <span class="menu-item__desc">(Sałata rzymska, parmezan, anchois, grzanki, podwędzana pierś z kurczaka, ziołowy vinegrette)</span></li>
-                <li class="menu-item">RAVIOLI Z PŁYNĄCYM ŻÓŁTKIEM  <span class="menu-item__desc">(ziemniaki, twaróg, szynka dojrzewająca, szczypiorek, masło szałwiowe)</span></li>
-                <li class="menu-item">KREM Z BIAŁYCH WARZYW  <span class="menu-item__desc">(Karmelizowany boczek, chips z pietruszki, oliwa ziołowa)</span></li>
-                <li class="menu-item">WĘDZONY LABRAKS <span class="menu-item__desc"> (Puree z kopru włoskiego, sos cytrynowo szafranowy, zielone warzywa)</span></li>
-                <li class="menu-item">JEDWABISTY SERNIK Z BIAŁĄ CZEKOLADĄ  <span class="menu-item__desc">(Ciasto na bazie kremowego serka, śmietany, białej czekolady, podane z sosem karmelowym)</span></li>
+                <li class="menu-item">SAŁATA CEZAR <span class="menu-item__desc">(Sałata rzymska, parmezan, anchois,
+                        grzanki, podwędzana pierś z kurczaka, ziołowy vinegrette)</span></li>
+                <li class="menu-item">RAVIOLI Z PŁYNĄCYM ŻÓŁTKIEM <span class="menu-item__desc">(ziemniaki, twaróg,
+                        szynka dojrzewająca, szczypiorek, masło szałwiowe)</span></li>
+                <li class="menu-item">KREM Z BIAŁYCH WARZYW <span class="menu-item__desc">(Karmelizowany boczek, chips
+                        z pietruszki, oliwa ziołowa)</span></li>
+                <li class="menu-item">WĘDZONY LABRAKS <span class="menu-item__desc"> (Puree z kopru włoskiego, sos
+                        cytrynowo szafranowy, zielone warzywa)</span></li>
+                <li class="menu-item">JEDWABISTY SERNIK Z BIAŁĄ CZEKOLADĄ <span class="menu-item__desc">(Ciasto na
+                        bazie kremowego serka, śmietany, białej czekolady, podane z sosem karmelowym)</span></li>
                 <span class="list-menu__price">135zł/os.</span>
-             </ul>
-             <ul class="list-menu" data-aos="fade-left" data-aos-duration="1500">
+            </ul>
+            <ul class="list-menu" data-aos="fade-left" data-aos-duration="1500">
                 <lh class="list-menu__header "></lh>
-                <li class="menu-item">CARPACCIO Z MARYNOWANEJ OŚMIORNICY <span class="menu-item__desc">(Kapary, oliwa cytrynowa, świeże zioła, chips z atramentu)</span></li>
-                <li class="menu-item">MULE <span class="menu-item__desc">(Gorgonzola, białe wino, szalotka, marynowany zielony pieprz, nać pietruszki)</span></li>
-                <li class="menu-item">ZUPA CEBULOWA <span class="menu-item__desc">(Grzanka serowa, piana pietruszkowa, prażona czarnuszka)</span></li>
-                <li class="menu-item">UDKO KACZKI CONFIT <span class="menu-item__desc">(Kasza pęczak z szalotką i grzybami, puree z marchwi, chipsy warzywne sezonowe, sos śliwkowy)</span></li>
-                <li class="menu-item">MUS CHAŁWOWY <span class="menu-item__desc">(Kruche ciastko maślane, bakalie, flambirowany banan)</span></li>
+                <li class="menu-item">CARPACCIO Z MARYNOWANEJ OŚMIORNICY <span class="menu-item__desc">(Kapary, oliwa
+                        cytrynowa, świeże zioła, chips z atramentu)</span></li>
+                <li class="menu-item">MULE <span class="menu-item__desc">(Gorgonzola, białe wino, szalotka, marynowany
+                        zielony pieprz, nać pietruszki)</span></li>
+                <li class="menu-item">ZUPA CEBULOWA <span class="menu-item__desc">(Grzanka serowa, piana pietruszkowa,
+                        prażona czarnuszka)</span></li>
+                <li class="menu-item">UDKO KACZKI CONFIT <span class="menu-item__desc">(Kasza pęczak z szalotką i
+                        grzybami, puree z marchwi, chipsy warzywne sezonowe, sos śliwkowy)</span></li>
+                <li class="menu-item">MUS CHAŁWOWY <span class="menu-item__desc">(Kruche ciastko maślane, bakalie,
+                        flambirowany banan)</span></li>
                 <span class="list-menu__price">125zł/os.</span>
-             </ul>
+            </ul>
         </section>
-        
+
         <section class='section' id='catering'>
             <ul class="catering-list">
-                    <lh class="catering-list__header" data-aos="fade-up" data-aos-duration="1500">
-                       Dodatkowo oferuję możliwość zamówienia ekskluzywnego cateringu,
-                       przygotowywanego z najwyższej jakości produktów. Poniżej przedstawiam przykładowe
-                       propozycje:
-                    </lh>
-                    <li class="catering-list__item">Rolada z biszkoptu szpinakowego, z łososiem wędzonym i chrzanowym serkiem</li>
-                    <li class="catering-list__item">Roladki z pieczonego bakłażana nadziewane pomidorami, pietruszką, z sosem czosnkowym</li>
-                    <li class="catering-list__item">Roladki z łososia wędzonego z ziołowym twarożkiem na plastrach zielonego ogórka</li>
-                    <li class="catering-list__item">Carpaccio z pieczonego buraka z orzechami włoskimi, kozim serem i aromatycznym dresingiem</li>
-                    <li class="catering-list__item">Tartinki z łososiem wędzonym na gorąco i świeżymi warzywami</li>
-                    <li class="catering-list__item">Deska ryb wędzonych (np. pstrąg, halibut, sieja, łosoś), grillowane cytryny, majonez koperkowy</li>
-                    <li class="catering-list__item">Deska mięs wędzonych (np. boczek wieprzowy, żeberka, polędwiczka, kaszanka, domowa kiełbasa, pierś z kaczki),
-                       domowy chrzan i żurawina.
-                    </li>
-                    <li class="catering-list__item">Plastry rostbefu marynowane w imbirze i sosie sojowym na aromatycznej rukoli</li>
-                    <li class="catering-list__item">Pasztet z gęsi domowego wypieku w towarzystwie karmelizowanej cebuli i sosu tatarskiego</li>
-                    <li class="catering-list__item">Baby mozarella, pomidor koktajlowy, świeża bazylia i sos balsamiczny</li>
-                    <li class="catering-list__item">Tatar z łososia z musem z avocado skropiony oliwą z pestek z dyni podany z chrupiącą ziołową grzanką</li>
-                    <li class="catering-list__item">Tatar wołowy w towarzystwie ogórka konserwowego, marynowanych grzybów, białej cebuli i pudru
-                       musztardowego
-                    </li>
-                    <li class="catering-list__item">Płatki różowej kaczki owinięte na miodowej gruszce z ruccolą</li>
-                 </ul>
+                <lh class="catering-list__header" data-aos="fade-up" data-aos-duration="1500">
+                    Dodatkowo oferuję możliwość zamówienia ekskluzywnego cateringu,
+                    przygotowywanego z najwyższej jakości produktów. Poniżej przedstawiam przykładowe
+                    propozycje:
+                </lh>
+                <li class="catering-list__item">Rolada z biszkoptu szpinakowego, z łososiem wędzonym i chrzanowym
+                    serkiem</li>
+                <li class="catering-list__item">Roladki z pieczonego bakłażana nadziewane pomidorami, pietruszką, z
+                    sosem czosnkowym</li>
+                <li class="catering-list__item">Roladki z łososia wędzonego z ziołowym twarożkiem na plastrach
+                    zielonego ogórka</li>
+                <li class="catering-list__item">Carpaccio z pieczonego buraka z orzechami włoskimi, kozim serem i
+                    aromatycznym dresingiem</li>
+                <li class="catering-list__item">Tartinki z łososiem wędzonym na gorąco i świeżymi warzywami</li>
+                <li class="catering-list__item">Deska ryb wędzonych (np. pstrąg, halibut, sieja, łosoś), grillowane
+                    cytryny, majonez koperkowy</li>
+                <li class="catering-list__item">Deska mięs wędzonych (np. boczek wieprzowy, żeberka, polędwiczka,
+                    kaszanka, domowa kiełbasa, pierś z kaczki),
+                    domowy chrzan i żurawina.
+                </li>
+                <li class="catering-list__item">Plastry rostbefu marynowane w imbirze i sosie sojowym na aromatycznej
+                    rukoli</li>
+                <li class="catering-list__item">Pasztet z gęsi domowego wypieku w towarzystwie karmelizowanej cebuli i
+                    sosu tatarskiego</li>
+                <li class="catering-list__item">Baby mozarella, pomidor koktajlowy, świeża bazylia i sos balsamiczny</li>
+                <li class="catering-list__item">Tatar z łososia z musem z avocado skropiony oliwą z pestek z dyni
+                    podany z chrupiącą ziołową grzanką</li>
+                <li class="catering-list__item">Tatar wołowy w towarzystwie ogórka konserwowego, marynowanych grzybów,
+                    białej cebuli i pudru
+                    musztardowego
+                </li>
+                <li class="catering-list__item">Płatki różowej kaczki owinięte na miodowej gruszce z ruccolą</li>
+            </ul>
         </section>
-        <div class="banner" data-aos="fade-up" data-aos-duration="1500"></div>
+        <div class="banner" data-aos="fade-up" data-aos-duration="1500"><div class="slider-item__gradient"></div></div>
         <section class='section section--smoking' id='smoking'>
-                <h2 class='section__title' data-aos="fade-up" data-aos-duration="1500">Propozycje menu</h2>
-                <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
-                        <div class='smoking-list__photo smoking-list__photo--meat'></div>
-                        <ul class="smoking-list">
-                           <lh class="smoking-list__title">Mięsa</lh>
-                           <li class="smoking-list__item">boczek</li>
-                           <li class="smoking-list__item">żeberka</li>
-                           <li class="smoking-list__item">schab</li>
-                           <li class="smoking-list__item">kaszanka</li>
-                           <li class="smoking-list__item">polędwiczka</li>
-                           <li class="smoking-list__item">domowa kiełbasa</li>
-                           <li class="smoking-list__item">kurczak (w całości, pierś, lub nóżki)</li>
-                           <li class="smoking-list__item">pierś z kaczki</li>
-                           <li class="smoking-list__item">comber jagnięcy</li>
-                           <li class="smoking-list__item">szynka wieprzowa i wołowa</li>
-                           <li class="smoking-list__item">steki wołowe</li>
-                           <p class="smoking-list__price">Deska wędzonych mięs- 85zł (na 6os.)</p>
-                        </ul>
-                        
-                     </div>
-                     <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
-                            <div class='smoking-list__photo smoking-list__photo--fish'></div>
-                            <ul class="smoking-list">
-                               <lh class="smoking-list__title">Ryby i owoce morza</lh>
-                               <li class="smoking-list__item">pstrąg</li>
-                               <li class="smoking-list__item">karp</li>
-                               <li class="smoking-list__item">sandacz</li>
-                               <li class="smoking-list__item">sola</li>
-                               <li class="smoking-list__item">sielawa</li>
-                               <li class="smoking-list__item">halibut</li>
-                               <li class="smoking-list__item">łupacz</li>
-                               <li class="smoking-list__item">śledź</li>
-                               <li class="smoking-list__item">łosoś</li>
-                               <li class="smoking-list__item">węgorz</li>
-                               <li class="smoking-list__item">ośmiornica</li>
-                               <li class="smoking-list__item">krewetki tygrysie</li>
-                               <p class="smoking-list__price">Deska wędzonych ryb- 100zł (na 6os.)</p>
-                            </ul>
-                            
-                         </div>
-                         <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
-                                <div class='smoking-list__photo smoking-list__photo--cheese'></div>
-                                <ul class="smoking-list">
-                                   <lh class="smoking-list__title">Sery</lh>
-                                   <li class="smoking-list__item">twaróg</li>
-                                   <li class="smoking-list__item">ser biały</li>
-                                   <li class="smoking-list__item">ser żółty</li>
-                                   <li class="smoking-list__item">parmezan</li>
-                                   <li class="smoking-list__item">halloumi</li>
-                                   <li class="smoking-list__item">ser pleśniowy</li>
-                                   <li class="smoking-list__item">camembert</li>
-                                   <p class="smoking-list__price">Deska wędzonych serów- 90zł (na 6os.)</p>
-                                </ul>
-                               
-                             </div>
+            <h2 class='section__title' data-aos="fade-up" data-aos-duration="1500">Wyroby wędzarnicze</h2>
+            <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
+                <div class='smoking-list__photo smoking-list__photo--meat'></div>
+                <ul class="smoking-list">
+                    <lh class="smoking-list__title">Mięsa</lh>
+                    <li class="smoking-list__item">boczek</li>
+                    <li class="smoking-list__item">żeberka</li>
+                    <li class="smoking-list__item">schab</li>
+                    <li class="smoking-list__item">kaszanka</li>
+                    <li class="smoking-list__item">polędwiczka</li>
+                    <li class="smoking-list__item">domowa kiełbasa</li>
+                    <li class="smoking-list__item">kurczak (w całości, pierś, lub nóżki)</li>
+                    <li class="smoking-list__item">pierś z kaczki</li>
+                    <li class="smoking-list__item">comber jagnięcy</li>
+                    <li class="smoking-list__item">szynka wieprzowa i wołowa</li>
+                    <li class="smoking-list__item">steki wołowe</li>
+                    <p class="smoking-list__price">Deska wędzonych mięs- 85zł (na 6os.)</p>
+                </ul>
+
+            </div>
+            <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
+                <div class='smoking-list__photo smoking-list__photo--fish'></div>
+                <ul class="smoking-list">
+                    <lh class="smoking-list__title">Ryby i owoce morza</lh>
+                    <li class="smoking-list__item">pstrąg</li>
+                    <li class="smoking-list__item">karp</li>
+                    <li class="smoking-list__item">sandacz</li>
+                    <li class="smoking-list__item">sola</li>
+                    <li class="smoking-list__item">sielawa</li>
+                    <li class="smoking-list__item">halibut</li>
+                    <li class="smoking-list__item">łupacz</li>
+                    <li class="smoking-list__item">śledź</li>
+                    <li class="smoking-list__item">łosoś</li>
+                    <li class="smoking-list__item">węgorz</li>
+                    <li class="smoking-list__item">ośmiornica</li>
+                    <li class="smoking-list__item">krewetki tygrysie</li>
+                    <p class="smoking-list__price">Deska wędzonych ryb- 100zł (na 6os.)</p>
+                </ul>
+
+            </div>
+            <div class="smoking-list-container" data-aos="fade-up" data-aos-duration="1500">
+                <div class='smoking-list__photo smoking-list__photo--cheese'></div>
+                <ul class="smoking-list">
+                    <lh class="smoking-list__title">Sery</lh>
+                    <li class="smoking-list__item">twaróg</li>
+                    <li class="smoking-list__item">ser biały</li>
+                    <li class="smoking-list__item">ser żółty</li>
+                    <li class="smoking-list__item">parmezan</li>
+                    <li class="smoking-list__item">halloumi</li>
+                    <li class="smoking-list__item">ser pleśniowy</li>
+                    <li class="smoking-list__item">camembert</li>
+                    <p class="smoking-list__price">Deska wędzonych serów- 90zł (na 6os.)</p>
+                </ul>
+
+            </div>
         </section>
-        
-        <section class='section contact'>
-            
-            <div class='section__image contact-image jarallax'  data-jarallax-element="-140"></div>
-                <div class='container container-color'>
-                        
-                    <form class='contact-form'>
-                            <h2 class='section__title'>Skontaktuj się ze mną</h2>
-                        <label for="" class='contact-form__label'>Imię i nazwisko</label>
-                        <input type="text" class='contact-form__input'>
-                        <label for="" class='contact-form__label'>Adres email</label>
-                        <input type="text" class='contact-form__input'>
-                        
-                        <label for="" class='contact-form__label'>Wiadomość</label>
-                        <textarea class='contact-form__textarea'></textarea>
-                        <button class='contact-form__button'>Wyślij</button>
-                    </form>
+        <section class='section gallery' id='gallery'>
+            <div class="my-slider">
+                <div class='slider-item'>
+                    <div class="slider-item__gradient"></div>
+                    <img class='slider-item__img' src='./sources/assets/gallery.jpg'>
+                    <p class='slider-item__content'>Szamka 1</p>
                 </div>
+                <div class='slider-item'>
+                    <div class="slider-item__gradient"></div>
+                    <img class='slider-item__img' src='./sources/assets/gallery.jpg'>
+                    <p class='slider-item__content'>Szamka 2</p>
+                </div>
+
+                <div class='slider-item'>
+                    <div class="slider-item__gradient"></div>
+                    <img class='slider-item__img' src='./sources/assets/gallery.jpg'>
+                    <p class='slider-item__content'>Szamka 3</p>
+                </div>
+
+                <div class='slider-item'>
+                    <div class="slider-item__gradient"></div>
+                    <img class='slider-item__img' src='./sources/assets/gallery.jpg'>
+                    <p class='slider-item__content'>Szamka 4</p>
+                </div>
+            </div>
         </section>
-        
+        <section class='section contact section--last' id='contact'>
+
+            <div class='section__image contact-image jarallax' data-jarallax-element="-140"></div>
+            <div class='container container-color'>
+
+                <form class='contact-form'>
+                    <h2 class='section__title'>Skontaktuj się ze mną</h2>
+                    <label for="" class='contact-form__label'>Imię i nazwisko</label>
+                    <input type="text" class='contact-form__input'>
+                    <label for="" class='contact-form__label'>Adres email</label>
+                    <input type="text" class='contact-form__input'>
+
+                    <label for="" class='contact-form__label'>Wiadomość</label>
+                    <textarea class='contact-form__textarea'></textarea>
+                    <button class='contact-form__button'>Wyślij</button>
+                </form>
+            </div>
+        </section>
+
 
     </main>
+    <footer class='footer'>
+
+    </footer>
     <script src='./sources/scripts/menuspy.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js"></script>
     <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
 
@@ -258,5 +337,5 @@
 
 </html>
 
-    
- </section>
+
+</section>
