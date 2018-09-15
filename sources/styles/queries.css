@@ -15,3 +15,45 @@
         width: 100%;
     }
 }
+
+
+
+@media only screen and (max-width: 800px) {
+    .section{
+        flex-flow: column wrap;
+    }
+    
+    .smoking-list-container{
+        flex-flow: column wrap;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    .section__image {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .menu {
+        width: 100%;
+    }
+    .section{
+        flex-flow: column wrap;
+    }
+    
+    .smoking-list-container{
+        flex-flow: column wrap;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    .section__image {
+        width: 100%;
+    }
+}

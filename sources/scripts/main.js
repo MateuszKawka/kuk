@@ -1,4 +1,20 @@
- AOS.init();
+AOS.init({
+	// Global settings
+	disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+	startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+	initClassName: 'aos-init', // class applied after initialization
+	animatedClassName: 'aos-animate', // class applied on animation
+	useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  
+	// Settings that can be overriden on per-element basis, by `data-aos-*` attributes:
+	offset: 100, // offset (in px) from the original trigger point
+	delay: 0, // values from 0 to 3000, with step 50ms
+	duration: 900, // values from 0 to 3000, with step 50ms
+	easing: 'ease-in-out', // default easing for AOS animations
+	once: false, // whether animation should happen only once - while scrolling down
+	mirror: true, // whether elements should animate out while scrolling past them
+	anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  });
 
  var slider = tns({
     container: '.my-slider',
@@ -44,17 +60,34 @@
 });
 
 var elm = document.querySelector('.menu');
-var ms = new MenuSpy(elm);
+var ms = new MenuSpy(elm, {
+	threshold: 264
+});
 console.log(elm)
 
 window.addEventListener('load', function(){
 	const spinner = document.getElementById('spinner')
-	spinner.style.visibility = 'hidden'
+	spinner.style.display = 'none'
 })
 
 // grab an element
-var myElement = document.querySelector(".headroom");
+//var myElement = document.querySelector(".headroom");
 // construct an instance of Headroom, passing the element
-var headroom  = new Headroom(myElement);
+//var headroom  = new Headroom(myElement);
 // initialise
-headroom.init(); 
+//headroom.init(); 
+
+
+function menuToggle() {
+	let menu = document.querySelector('.menu');
+	menu.classList.toggle('menu--hidden')
+}
+
+
+const menuButton = document.querySelector('.nav__mobile-button')
+
+menuButton.addEventListener('click', menuToggle)
+
+
+
+ScrollReveal().reveal('.section');

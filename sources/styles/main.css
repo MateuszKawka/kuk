@@ -1,4 +1,5 @@
 @import 'reset.css';
+
 html {
     font-size: 62.5%;
     margin: 0;
@@ -13,6 +14,9 @@ html {
 }
 
 .body {
+    width: 100%;
+    height: 100%;
+    
     overflow-x: hidden;
 }
 
@@ -20,7 +24,7 @@ html {
     width: 100%;
     height: 100vh;
     display: flex;
-    background: url('../assets/header.png') center no-repeat;
+    background: url('./images/header.png') center no-repeat;
     background-size: contain;
 }
 
@@ -36,16 +40,24 @@ html {
 }
 
 .menu {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-right: 5rem;
 }
 
+.nav__mobile-button{
+    display: none
+}
+
 .item {
     list-style-type: none;
-    padding: 1rem 1rem;
+    padding: 1rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .item__link {
@@ -88,6 +100,7 @@ html {
     align-items: center;
     flex-wrap: wrap;
     margin: 8rem 0;
+    overflow-x: hidden
 }
 
 .section__title {
@@ -127,7 +140,7 @@ html {
 .img {
     width: 35%;
     height: auto;
-    border: 1px solid #ffa55c
+    
 }
 
 .step::before {
@@ -262,7 +275,7 @@ html {
 .section__image {
     width: 50%;
     height: 100%;
-    background: url('../assets/food1.jpg') right no-repeat;
+    background: url('./images/entry.jpg') right no-repeat;
     background-size: cover;
 }
 
@@ -276,17 +289,17 @@ html {
 }
 
 .smoking-list__photo--meat {
-    background: url('../assets/meat.jpg') center no-repeat;
+    background: url('./images/smoking-meat.jpg') center no-repeat;
     background-size: cover;
 }
 
 .smoking-list__photo--fish {
-    background: url('../assets/fish.jpeg') center no-repeat;
+    background: url('./images/smoking-fish.jpeg') center no-repeat;
     background-size: cover;
 }
 
 .smoking-list__photo--cheese {
-    background: url('../assets/cheese.jpeg') center no-repeat;
+    background: url('./images/smoking-cheese.jpg') center no-repeat;
     background-size: cover;
 }
 
@@ -297,7 +310,7 @@ html {
 .banner {
     width: 100%;
     height: 75vh;
-    background: url('../assets/banner.jpeg') center no-repeat;
+    background: url('./images/banner.jpg') center no-repeat;
     background-size: cover;
     background-attachment: fixed
 }
@@ -376,6 +389,18 @@ html {
     margin: 0 1rem;
 }
 
+
+.tns-controls button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url('./images/play-button.svg') center no-repeat;
+    background-size: cover;
+}
+
+.tns-controls button:first-child {
+    transform: rotate(180deg)
+}
 .tns-nav-active {
     background: #99531f !important
 }
@@ -388,7 +413,7 @@ html {
 }
 
 .tns-inner {
-    height: 100vh;
+    height: auto;
 }
 
 .jarallax {}
@@ -502,6 +527,10 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.13) 1%,rgba(139,139,13
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', endColorstr='#b3000000',GradientType=0 );
 }
 
+.slider-item__gradient--relative{
+    position: relative;
+}
+
 .slider-item__content {
     width: 100%;
     padding: 3rem 0 6rem 6rem;
@@ -514,7 +543,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
     font-weight: 700;
     color: #fff;
 
-    
+}
+
+.contact-image {
+    width: 50%;
+    height: 100%;
+    background: url('./images/contact.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.about {
+    height: auto;
+    min-height: 0;
+}
+
+.content {
+    width: 75%;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    margin: 3rem 0;
 }
 
 @media only screen and (max-width: 800px) {
@@ -602,4 +649,154 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
 }
 .headroom--unpinned {
     transform: translateY(-100%);transition: transform 200ms linear;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    .menu {
+        width: 60%;
+        flex-flow: column;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        background: #fff;
+        transition: .3s all ease-in-out;
+    }
+    .nav {
+        height: 72px;
+    }
+    .nav__mobile-button {
+        display: flex;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: url('./images/menu.png') center no-repeat;
+        background-size: cover;
+        border: none;
+        width: 32px;
+        height: 32px;
+    }
+    .menu--hidden {
+        transform: translateX(150%)
+    }
+
+    .item {
+        max-width: 192px;
+    }
+    .section{
+        flex-flow: column wrap;
+    }
+    
+    .smoking-list-container{
+        flex-flow: column wrap;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    .section__image {
+        width: 100%;
+    }
+
+    .tns-inner {
+        height: auto;
+    }
+
+    .contact-image {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .contact-form {
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+    .contact-form__textarea{
+        width: 55%;
+    }
+
+    .footer {
+        margin-top: 6rem;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .gallery {
+        min-height: 0;
+    }
+
+    .section {
+        margin: 4rem 0;
+    }
+
+    .img {
+        width: 100%;
+        margin-top: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        padding: 0;
+    }
+
+    .header {
+        height: 70vh;
+    }
+    .list-menu{
+        width: 90%;
+    }
+    
+    .smoking-list-container{
+        flex-flow: column;
+        width: 90%;
+        max-height: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .smoking-list__photo{
+        width: 100%;
+        height: 30vh;
+    }
+
+    .smoking-list__title {
+        margin: 1rem 0 0 0 ;
+    }
+
+
+    .steps {
+        width: 90%;
+    }
+    .smoking-list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    }
+    .container {
+        width: 100% !important;
+    }
+
+    .section__image {
+        width: 100%;
+    }
+
+    .contact-form__input {
+        width: 85%;
+
+    }
+
+    .contact-form__textarea{
+width: 85%;
+    }
 }
