@@ -39,7 +39,7 @@ gulp.task('imagemin', () =>
             progressive: true
         }),
         imagemin.optipng({
-            optimizationLevel: 10
+            optimizationLevel: 1
         }),
         imagemin.svgo({
             plugins: [{

@@ -5,7 +5,7 @@ AOS.init({
 	initClassName: 'aos-init', // class applied after initialization
 	animatedClassName: 'aos-animate', // class applied on animation
 	useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  
+
 	// Settings that can be overriden on per-element basis, by `data-aos-*` attributes:
 	offset: 100, // offset (in px) from the original trigger point
 	delay: 0, // values from 0 to 3000, with step 50ms
@@ -14,16 +14,18 @@ AOS.init({
 	once: false, // whether animation should happen only once - while scrolling down
 	mirror: true, // whether elements should animate out while scrolling past them
 	anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-  });
+});
 
- var slider = tns({
-    container: '.my-slider',
-    items: 1,
-    slideBy: 'page',
-    autoplay: false
-  });
+var slider = tns({
+	container: '.my-slider',
+	items: 1,
+	slideBy: 'page',
+	autoplay: false,
+	controlsText: ['', ''],
+	mouseDrag: true
+});
 
-  var scroll = new SmoothScroll('a[href*="#"]', {
+var scroll = new SmoothScroll('a[href*="#"]', {
 
 	// Selectors
 	ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
@@ -31,7 +33,7 @@ AOS.init({
 	topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
 
 	// Speed & Easing
-	speed: 500, // Integer. How fast to complete the scroll in milliseconds
+	speed: 800, // Integer. How fast to complete the scroll in milliseconds
 	clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
 	offset: function (anchor, toggle) {
 
@@ -65,7 +67,7 @@ var ms = new MenuSpy(elm, {
 });
 console.log(elm)
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
 	const spinner = document.getElementById('spinner')
 	spinner.style.display = 'none'
 })
@@ -85,7 +87,10 @@ function menuToggle() {
 
 
 const menuButton = document.querySelector('.nav__mobile-button')
-
+const menuLinks = document.querySelectorAll('.item__link')
+menuLinks.forEach(v => {
+	v.addEventListener('click', menuToggle)
+})
 menuButton.addEventListener('click', menuToggle)
 
 

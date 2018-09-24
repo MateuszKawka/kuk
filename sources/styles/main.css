@@ -4,19 +4,19 @@ html {
     font-size: 62.5%;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open sans', sans-serif;
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: #333333;
+    font-family: 'Open sans', sans-serif;
+    color: #2f2d2d;
 }
 
 .body {
     width: 100%;
     height: 100%;
-    
+    font-family: 'Open sans', sans-serif;
     overflow-x: hidden;
 }
 
@@ -24,6 +24,7 @@ html {
     width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: space-around;
     background: url('./images/header.png') center no-repeat;
     background-size: contain;
 }
@@ -32,32 +33,53 @@ html {
     width: 100%;
     height: 92px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 10;
+    padding: 0 2rem;
     background: #fff;
+    border-bottom: 2px solid #f7cd9c
 }
 
-.menu {
-    width: 80%;
+.social {
+    max-width: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+
+}
+
+.social__icon {
+    font-size: 2.4rem;
+    margin: 0 2rem;
+    color: #9a5521 
+}
+
+
+.menu {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    padding-right: 5rem;
 }
 
 .nav__mobile-button{
     display: none
 }
 
+.nav__logo {
+    font-size: 2.6rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+}
+
 .item {
     list-style-type: none;
     padding: 1rem 0rem;
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .item__link {
@@ -66,18 +88,20 @@ html {
     font-size: 1.4rem;
     transition: .25s all ease-in-out;
     margin: 0 2rem;
+    height: auto;
     position: relative;
+    font-weight: 600;
 }
 
 .item__link:hover {
-    color: #99531f;
+    color: #c2733f;
 }
 
 .item__link::before {
     content: '';
     width: 100%;
     height: 1.5px;
-    background: #99531f;
+    background: #c2733f;
     position: absolute;
     top: 24px;
     opacity: 0;
@@ -89,6 +113,17 @@ html {
     opacity: 1;
     transform: scale(1)
 }
+
+
+.active:before {
+    content: '';
+    width: 100%;
+    height: .2rem;
+    background: #dcdcdb;
+    position: absolute;
+    top: 1.7rem;
+}
+
 
 .section {
     width: 100%;
@@ -107,15 +142,11 @@ html {
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
-    font-family: 'Domine';
     margin: 4rem 0;
     padding: 0 6rem;
+    font-weight: 700;
 }
 
-.section__title--white {
-    color: #dcdcdb;
-
-}
 
 .section__subtitle {
     width: 100%;
@@ -154,7 +185,6 @@ html {
 
 .step__title {
     font-size: 2.5rem;
-    font-family: 'Domine';
     color: #99531f;
     text-align: center;
 }
@@ -181,7 +211,7 @@ html {
     list-style-type: none;
     padding: 2rem 4rem;
     margin-top: 8rem;
-    border-bottom: 1px solid #9e9e9e;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .menu-item {
@@ -203,7 +233,6 @@ html {
 .list-menu__price {
     width: 100%;
     text-align: right;
-    color: #fff;
     font-size: 1.5rem;
     
     font-weight: 300;
@@ -216,7 +245,7 @@ html {
 }
 
 .menu-suggestion {
-    background: #333;
+    background: #fff;
     padding: 8rem 0;
     margin-bottom: 0;
 }
@@ -248,7 +277,7 @@ html {
     width: 100%;
     text-align: center;
     margin: 2rem 0;
-    font-family: 'Domine';
+    font-weight: 600;
     padding-bottom: 1rem;
 }
 
@@ -322,16 +351,14 @@ html {
 
 .catering-list__header {
     font-size: 2rem;
-    width: 45%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
     margin: 3rem 0;
-    font-family: 'Domine';
     color: #99531f;
 }
 
 .catering-list__item {
     font-size: 1.4rem;
-    font-family: 'Roboto';
     margin: 2rem 0;
     padding: .5rem;
     border-bottom: 1px solid #dcdcdb;
@@ -391,15 +418,18 @@ html {
 
 
 .tns-controls button {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: url('./images/play-button.svg') center no-repeat;
-    background-size: cover;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px; transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
-.tns-controls button:first-child {
-    transform: rotate(180deg)
+.tns-controls button:last-child {
+    transform: rotate(-45deg)
 }
 .tns-nav-active {
     background: #99531f !important
@@ -472,7 +502,6 @@ html {
     resize: none;
     border: none;
     padding: 1rem;
-    font-family: 'Roboto';
     color: #dcdcdb;
     background: #333333
 }
@@ -482,7 +511,6 @@ html {
     height: 36px;
     background: #333333;
     font-size: 1.4rem;
-    font-family: 'Domine';
     font-weight: 700;
     border: none;
     color: #dcdcdb;
@@ -490,10 +518,6 @@ html {
     cursor: pointer;
 }
 
-.active {
-    background: #dcdcdb;
-    transition: .3s all ease-in-out;
-}
 
 .footer {
     width: 100%;
@@ -508,13 +532,19 @@ html {
 .slider-item{
     position: relative;
     width: 100%;
-    
+    height: auto;
+
+    display: flex;
 }
 
 .slider-item__img {
     width: 100%;
-    height: auto;
+    height: 100vh;
     
+}
+
+.tns-ovh {
+    width: 100%;
 }
 
 .slider-item__gradient{
@@ -532,15 +562,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
 }
 
 .slider-item__content {
-    width: 100%;
-    padding: 3rem 0 6rem 6rem;
+    width: 50%;
+    padding: 3rem 22rem 6rem 6rem;
     position: absolute;
-    bottom: 30%;
+    bottom: 10%;
     left: 0%;
     vertical-align: 100%;
     z-index: 10;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 400;
     color: #fff;
 
 }
@@ -554,11 +584,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
 
 .about {
     height: auto;
-    min-height: 0;
+    min-height: 60vh;
 }
 
 .content {
-    width: 75%;
+    width: 65%;
     padding: 1rem 2rem;
     font-size: 1.6rem;
     margin: 3rem 0;
@@ -653,6 +683,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
 
 
 
+.slider-item__img--1 {
+    background: url('./images/gallery1.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.slider-item__img--2 {
+    background: url('./images/gallery2.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.slider-item__img--3 {
+    background: url('./images/gallery3.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.slider-item__img--4 {
+    background: url('./images/gallery4.jpg') center no-repeat;
+    background-size: cover;
+}
 
 
 
@@ -661,13 +710,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
         width: 60%;
         flex-flow: column;
         position: absolute;
-        top: 64px;
+        top: 56px;
         right: 0;
         background: #fff;
-        transition: .3s all ease-in-out;
+        transition: .2s all ease-in-out;
     }
     .nav {
-        height: 72px;
+        height: 56px;
     }
     .nav__mobile-button {
         display: flex;
@@ -745,6 +794,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
 
 
 @media only screen and (max-width: 600px) {
+    .nav {
+        padding-left: 1rem;
+        padding-right: 25%;
+    }
     .menu {
         padding: 0;
     }
@@ -754,6 +807,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
     }
     .list-menu{
         width: 90%;
+        padding: 2rem;  
     }
     
     .smoking-list-container{
@@ -799,4 +853,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ffffff', e
     .contact-form__textarea{
 width: 85%;
     }
+}
+
+
+.social__icon--fb {
+    
+}
+
+.social__icon--insta {
+    
 }
